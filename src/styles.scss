@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+}
+body {
+  background-color: #efefef;
+}
+input:focus-visible {
+  outline: none;
+}
+
+///////////////////////reusable classes///////////////////////
+
+.usersContainer {
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.activeUsersContainer {
+  padding: 14px;
+  border-radius: 7px;
+  background-color: #fff;
+  max-height: 600px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #dbdbdb;
+    border-radius: 5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #7b7b7b;
+    border-radius: 5rem;
+    width: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+//////////////////////// end of reusable classes///////////////////////
+
+////////////////////// start of searchBar component styles///////////////////////
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+  img {
+    height: 20px;
+  }
+  input {
+    margin-left: 10px;
+
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 31.5px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    max-width: 534px;
+    width: 100%;
+    height: 32px;
+    border: none;
+    color: #000;
+  }
+  h3 {
+    margin-left: 10px;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 31.5px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .searchBarInner {
+    width: 534px;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    border: none;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      min-width: 300px;
+    }
+  }
+  button {
+    background-color: transparent;
+    border: none;
+  }
+}
+//////////////////// end of searchBar component styles///////////////////////
+/////////////////// start of userCard component styles///////////////////////
+.user-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.user-card.favorite {
+  border: 2px solid gold;
+  background-color: #fffbe6;
+}
+/////////////////// end of userCard component styles///////////////////////
+////////////////// start of userDetails component styles///////////////////////
+.userDetails {
+  margin: 20px auto;
+  padding: 14px;
+  border-radius: 7px;
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 7px;
+  }
+  a {
+    color: #2d9cdb;
+  }
+  .star {
+    width: auto;
+  }
+  .userDetailsInner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 170px);
+
+    .detailsFollower {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: start;
+      .followers {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+
+        p,
+        h6 {
+          text-align: center;
+        }
+      }
+    }
+    h6 {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 42px;
+      letter-spacing: 0.15000000596046448px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #8d8d8d;
+    }
+  }
+}
+
+////////////////// end of userDetails component styles///////////////////////
